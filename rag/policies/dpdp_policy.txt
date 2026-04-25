@@ -1,0 +1,60 @@
+DATA PRIVACY AND DPDP COMPLIANCE POLICY — ACME CORPORATION (Tenant: AuthBridge)
+Effective Date: January 1, 2026 | Version 2.0 | Approved by: Data Protection Officer
+
+1. OVERVIEW
+This policy governs the collection, processing, storage, and deletion of personal data during employee onboarding, in compliance with the Digital Personal Data Protection Act 2023 (DPDP Act) and DPDP Rules 2025 (notified 13 November 2025). Substantive enforcement begins 13 May 2027. Acme Corporation operates as a Data Fiduciary; AuthBridge operates as a Data Processor for BGV services.
+
+2. LEGAL BASIS FOR DATA PROCESSING
+- Section 7(1)(i) — Legitimate Use: Covers recruitment, onboarding, payroll, performance management, PF/tax filings, and workplace security. Does NOT require explicit consent.
+- Section 6 — Consent: Required for biometrics, medical records beyond statutory compliance, extended CCTV, third-party data sources, and BGV. Consent must be specific, revocable, and unbundled.
+- Important: "By signing the offer you consent to all checks" is INVALID under DPDP. Consent must be purpose-specific and separately obtainable.
+
+3. CONSENT MANAGEMENT
+3.1 Collection: Consent is collected per-purpose through the onboarding portal. Each consent request clearly states: (a) what data, (b) why, (c) how long retained, (d) who processes it, (e) right to withdraw.
+3.2 Withdrawal: Data principals (employees/candidates) may withdraw consent at any time through the portal. Withdrawal does not affect lawfulness of processing prior to withdrawal.
+3.3 Record-keeping: All consent events (granted, modified, withdrawn) are logged in the consents table with timestamp, purpose, and legal notice language.
+
+4. DATA PRINCIPAL RIGHTS
+Under DPDP, every candidate and employee has the right to:
+- Access: Request a summary of all personal data processed and the processing activities.
+- Correction: Request correction of inaccurate or incomplete data.
+- Erasure: Request deletion of data no longer necessary for the stated purpose.
+- Portability: Receive personal data in a structured, commonly used format (when technically feasible).
+- Nomination: Nominate another person to exercise rights in case of death or incapacity.
+- Grievance Redressal: File a complaint with the company's DPO. If unresolved within 7 days (per DPDP Rule 14), escalate to the Data Protection Board.
+
+5. DATA RETENTION SCHEDULE
+- PF/ESI Records: 10 years post-termination (Employees' Provident Funds Act)
+- Income Tax/TDS: 6-8 years (Income Tax Act)
+- KYC/AML records: 5-10 years (PMLA)
+- POSH records: 5 years (Sexual Harassment Act)
+- BGV records: Duration of employment + 7 years
+- Biometric data: Must be auto-deleted 3 months post-termination
+- Onboarding documents: Duration of employment + 3 years
+- AI audit logs: 7 years (for regulatory compliance and DPIA requirements)
+
+6. BREACH NOTIFICATION
+- Any personal data breach must be reported to the Data Protection Board within 72 hours of discovery.
+- Affected data principals must be notified without undue delay.
+- Penalties: Up to ₹250 crore for security-safeguard failures; ₹200 crore for breach-notification failures.
+- The AI onboarding system includes automated breach-detection hooks with 72-hour DPDP timer.
+
+7. AI-SPECIFIC PROVISIONS
+- All AI model outputs are logged in the immutable audit_trail table.
+- Prompt injection detection is active on all user inputs.
+- PII redaction (Aadhaar masking, name redaction) applied before any external API call.
+- Model version, retrieved context, and consent reference are logged for every AI action.
+- Algorithmic audit capability: The audit trail enables regulators to inspect any AI decision.
+- India-based DPO contact: dpo@acmecorp.in | Response SLA: 7 days per DPDP Rule 14.
+
+8. CROSS-BORDER DATA TRANSFER
+- Employee data processed within India by default (India data residency).
+- Cross-border transfer only to jurisdictions approved by the Central Government under DPDP Section 16.
+- AuthBridge guarantees India-based processing for all BGV data.
+- Transfer impact assessments required for any new jurisdiction.
+
+9. DATA PROTECTION IMPACT ASSESSMENT (DPIA)
+- Annual DPIA required for all Significant Data Fiduciaries.
+- DPIA covers: AI processing of employee data, BGV data flows, consent management, and cross-border transfers.
+- Independent audit required annually.
+- India-based DPO mandatory for Significant Data Fiduciaries.

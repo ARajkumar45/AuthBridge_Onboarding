@@ -1,0 +1,39 @@
+LEAVE POLICY — ACME CORPORATION (Tenant: AuthBridge)
+Effective Date: January 1, 2026 | Version 3.2 | Approved by: CHRO Office
+
+1. SCOPE
+This policy applies to all full-time employees of Acme Corporation onboarded through the AuthBridge AI-Native Onboarding Platform. Contract workers and interns follow separate guidelines.
+
+2. LEAVE ENTITLEMENTS (per calendar year)
+- Earned Leave (EL): 24 days per year, accruing at 2 days per month. Encashment of up to 10 unused days permitted at year-end.
+- Casual Leave (CL): 12 days per year. Cannot be carried forward. Maximum 3 consecutive days.
+- Sick Leave (SL): 12 days per year. Medical certificate required for absences exceeding 2 consecutive days.
+- Maternity Leave: 26 weeks for the first two children (as per Maternity Benefit Act, 2017). 12 weeks for third child onwards.
+- Paternity Leave: 15 working days within 6 months of child's birth or adoption.
+- Bereavement Leave: 5 days for immediate family (spouse, children, parents, siblings).
+
+3. PROBATION PERIOD LEAVE
+New hires during the 6-month probation period receive:
+- CL: 1 day per month (6 total during probation)
+- SL: 1 day per month (6 total during probation)
+- EL does not accrue during probation; it begins from the 7th month.
+- All other statutory leaves (maternity, paternity) apply from Day 1.
+
+4. LEAVE APPLICATION PROCESS
+- All leave requests must be submitted through the HRMS portal at least 3 working days in advance for planned leave.
+- Sick leave of 3+ days requires uploading a medical certificate to the onboarding document portal.
+- Manager approval is required for all leave types. Auto-approval applies for CL of 1 day if submitted 48 hours in advance.
+- The AI onboarding assistant can help new hires understand their leave balance, policy details, and application process.
+
+5. PUBLIC HOLIDAYS
+- 10 national/regional holidays per year as declared by the company.
+- 2 optional/floater holidays (employee's choice from a pre-approved list).
+- Holiday calendar is shared during onboarding and available in the policy portal.
+
+6. LEAVE WITHOUT PAY (LWP)
+- Permitted only after exhaustion of all paid leave balances.
+- Requires written approval from Department Head and HR.
+- LWP exceeding 30 days in a year may affect annual appraisal and benefits eligibility.
+
+7. COMPLIANCE NOTE
+This policy complies with the Factories Act 1948, Shops and Establishments Act (state-specific), and the Code on Social Security 2020. All leave records are maintained as per statutory requirements with a minimum retention period of 8 years.

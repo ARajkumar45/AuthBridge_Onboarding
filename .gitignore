@@ -1,0 +1,70 @@
+# ── Secrets — NEVER commit these ────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+secrets/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+pip-wheel-metadata/
+
+# ── Virtual environment ───────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+ENV/
+
+# ── ChromaDB persistence (large binary files) ────────────────────────────────
+chroma_db/
+*.chroma
+
+# ── SQLite database (contains PII — never commit) ────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Testing & Coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── App backups (generated during refactoring) ────────────────────────────────
+*.bak
+*.bak2
+*.bak3
+
+# ── SQLite WAL / SHM ─────────────────────────────────────────────────────────
+*.db-shm
+*.db-wal
+
+# ── Linux FUSE temp files ─────────────────────────────────────────────────────
+.fuse_hidden*
+
+# ── Malformed directory created by shell brace expansion bug ─────────────────
+{database,rag
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb

@@ -1,0 +1,50 @@
+IT PROVISIONING AND ACCESS MANAGEMENT POLICY — ACME CORPORATION (Tenant: AuthBridge)
+Effective Date: January 1, 2026 | Version 1.5 | Approved by: CTO Office
+
+1. PURPOSE
+This policy defines the IT provisioning process for new hires during onboarding. The AI-Native Onboarding system automates provisioning requests based on role, department, and seniority, with HITL approval for elevated access.
+
+2. STANDARD PROVISIONING PACKAGE
+All new hires receive the following on or before Day 1:
+- Corporate email account (Google Workspace / Microsoft 365)
+- Laptop with standard software image (configured per department)
+- VPN access for remote work
+- Access to HRMS portal (Darwinbox/Keka/SuccessFactors integration)
+- Access to internal knowledge base and policy portal
+- Badge/physical access card for office premises
+- Slack/Teams workspace access
+
+3. ROLE-BASED ACCESS CONTROL (RBAC)
+Access levels are determined by department and designation:
+- Engineering: GitHub/GitLab, CI/CD pipelines, staging environments, AWS/GCP console (read-only for juniors)
+- Finance: ERP system, expense management, financial reporting tools
+- HR: HRMS admin access, recruitment platform, onboarding dashboard
+- Sales: CRM (Salesforce/HubSpot), sales analytics, client database
+- Management (VP+): Executive dashboard, board document repository, strategic planning tools
+
+4. ELEVATED ACCESS REQUESTS
+The following require HITL (Human-in-the-Loop) approval from IT Admin + Manager:
+- Production database access
+- Admin-level cloud console access (AWS root, GCP org admin)
+- Access to PII/financial data systems
+- VPN access to client environments
+- Source code repository write access for external contractors
+
+5. PROVISIONING TIMELINE
+- Day -5 (before joining): Laptop procurement and software imaging initiated
+- Day -2: Email account and basic access created
+- Day 0: Physical access card issued, VPN configured, HRMS access granted
+- Day 1: Role-specific tools and systems access granted post manager verification
+- Day 7: Follow-up check by AI onboarding assistant to verify all access is working
+
+6. DEPROVISIONING
+- All access revoked within 4 hours of separation notification
+- Laptop returned and wiped within 24 hours
+- Email access retained in read-only mode for 30 days for knowledge transfer
+- VPN and production access immediately terminated
+
+7. COMPLIANCE
+- Access logs retained for 3 years per ISO 27001 requirements
+- Quarterly access reviews conducted by IT Security team
+- MFA mandatory for all cloud services, VPN, and email
+- SOC 2 Type II controls applied to all provisioning workflows

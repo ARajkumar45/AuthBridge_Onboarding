@@ -1,0 +1,51 @@
+BACKGROUND VERIFICATION (BGV) POLICY — ACME CORPORATION (Tenant: AuthBridge)
+Effective Date: January 1, 2026 | Version 4.1 | Approved by: Chief People Officer
+
+1. PURPOSE AND SCOPE
+Acme Corporation mandates background verification for all new hires as a condition of employment. BGV is conducted through AuthBridge Research Services — India's largest background verification company with 1.5B+ records and ISO 27001, SOC 2 Type II certifications. This policy applies to all employment categories: full-time, contract, and C-suite hires.
+
+2. BGV PROCESS OVERVIEW
+The AI-Native Onboarding system initiates BGV automatically upon offer acceptance, subject to the candidate's explicit, unbundled consent (DPDP Act 2023 compliant). The process follows this sequence:
+
+Step 1: Consent Collection — Specific, per-purpose consent obtained via the onboarding portal. Consent is revocable at any time per DPDP Section 6.
+Step 2: Document Collection — Candidate uploads identity, education, and employment documents through the secure portal. AI document extraction agent processes uploads in real-time.
+Step 3: Verification Initiation — BGV agent calls the AuthBridge iBRIDGE 2.0 API to initiate verification checks.
+Step 4: Verification Tracking — Real-time status updates via the HR Admin Dashboard. Average turnaround: 3-5 business days for standard checks.
+Step 5: Results & Decision — Verification results are presented to HR with risk scoring. Discrepancies trigger HITL (Human-in-the-Loop) review.
+
+3. TYPES OF VERIFICATION CHECKS
+- Identity Verification: Aadhaar (via DigiLocker/UIDAI), PAN (via NSDL/CDSL), Passport, Voter ID. Aadhaar masking applied per UIDAI 2025 circular (first 8 digits masked).
+- Address Verification: Current and permanent address verified through physical verification or digital databases. AuthBridge's 20,000+ PIN code CPV footprint covers all-India.
+- Education Verification: Degree certificates verified directly with universities/institutions. 41% of discrepancies involve fake degrees (AuthBridge First Firewall study).
+- Employment Verification: Previous employment history verified with past employers. Covers designation, tenure, reason for leaving, and re-hire eligibility.
+- Criminal Record Check: Court record checks across 3,500+ courts via AuthBridge Vault database. Covers district, high court, and Supreme Court records.
+- Drug Test: Conducted through accredited partner labs when required by role/industry (e.g., manufacturing, healthcare).
+
+4. DISCREPANCY HANDLING
+- Minor discrepancies (e.g., slight date variations): Auto-resolved by AI with audit log.
+- Major discrepancies (e.g., fake degree, undisclosed criminal record): Flagged to HITL queue. HR Admin must review and decide within 5 business days.
+- Critical flags: Immediate escalation to Compliance Officer and CHRO. Offer may be rescinded per employment contract clause 7.2.
+
+5. TURNAROUND TIMES (SLA)
+- Identity Verification: 24-48 hours
+- Address Verification: 3-5 business days (physical) / 24 hours (digital)
+- Education Verification: 5-7 business days
+- Employment Verification: 5-10 business days
+- Criminal Record Check: 3-5 business days
+- Comprehensive Package: 7-10 business days
+
+6. DATA PRIVACY AND DPDP COMPLIANCE
+- All BGV data is processed under explicit consent (DPDP Section 6) or legitimate use (Section 7(1)(i) for employment purposes).
+- Consent is specific, revocable, and unbundled — candidates consent separately for each check type.
+- Data retention: BGV records retained for the duration of employment plus 7 years post-termination.
+- Data principal rights: Candidates can access, correct, or request erasure of their BGV data through the portal.
+- Breach notification: Any data breach must be reported to the Data Protection Board within 72 hours per DPDP Rules 2025.
+- Cross-border transfer: BGV data for international hires follows DPDP cross-border transfer provisions.
+
+7. VENDOR MANAGEMENT
+AuthBridge is the exclusive BGV vendor. The contract includes:
+- 99.9% uptime SLA for iBRIDGE API
+- ISO 27001 and SOC 2 Type II certifications
+- India data residency guarantee
+- AES-256 encryption at rest, TLS 1.2+ in transit
+- Annual DPIA (Data Protection Impact Assessment) review

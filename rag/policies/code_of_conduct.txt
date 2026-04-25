@@ -1,0 +1,49 @@
+CODE OF CONDUCT AND ETHICS POLICY — ACME CORPORATION (Tenant: AuthBridge)
+Effective Date: January 1, 2026 | Version 2.3 | Approved by: Board of Directors
+
+1. PURPOSE
+This Code of Conduct establishes the ethical standards and behavioral expectations for all employees of Acme Corporation. Acknowledgement of this code is a mandatory step in the onboarding process, tracked by the AI-Native Onboarding system.
+
+2. CORE VALUES
+- Integrity: We act honestly and ethically in all business dealings.
+- Respect: We treat all colleagues, clients, and stakeholders with dignity.
+- Accountability: We take responsibility for our actions and decisions.
+- Innovation: We embrace technology and continuous improvement.
+- Compliance: We adhere to all applicable laws and regulations.
+
+3. WORKPLACE CONDUCT
+3.1 Professional Behavior: Employees must maintain professional conduct during work hours and at company events. This includes respectful communication, punctuality, and appropriate dress code.
+3.2 Anti-Harassment: Zero tolerance for harassment of any kind — sexual, verbal, physical, or cyber. All complaints handled per the Prevention of Sexual Harassment (POSH) Act, 2013. Internal Complaints Committee (ICC) contactable via the HRMS portal.
+3.3 Diversity and Inclusion: Acme Corporation is committed to a diverse, equitable, and inclusive workplace. Discrimination based on gender, caste, religion, disability, age, sexual orientation, or any protected characteristic is strictly prohibited.
+
+4. CONFLICTS OF INTEREST
+- Employees must disclose any personal or financial interest that may conflict with company interests.
+- Outside employment requires written approval from the Department Head.
+- Gifts from vendors/clients exceeding ₹5,000 in value must be declared to the Ethics Committee.
+
+5. CONFIDENTIALITY AND DATA PROTECTION
+- All company information, client data, and proprietary technology are confidential.
+- NDA signed during onboarding applies for 2 years post-employment.
+- Personal data handling must comply with the DPDP Act 2023.
+- Sharing company data on personal devices, cloud storage, or social media is prohibited without authorization.
+
+6. USE OF COMPANY RESOURCES
+- Company assets (laptops, phones, vehicles) are for business use only.
+- Limited personal use of email and internet is permitted but monitored per IT policy.
+- Software installations require IT approval to maintain security compliance.
+
+7. REPORTING AND WHISTLEBLOWER PROTECTION
+- Employees must report any violation of this code to their manager, HR, or the Ethics Hotline.
+- Whistleblower protection: Employees reporting in good faith are protected from retaliation per the Whistleblower Protection Act.
+- Anonymous reporting available through the Ethics Hotline: ethics@acmecorp.in
+
+8. COMPLIANCE AND CONSEQUENCES
+- Acknowledgement of this policy is mandatory during onboarding (tracked in the tasks table).
+- Annual re-certification required for all employees.
+- Violations may result in disciplinary action up to and including termination.
+- Serious violations (fraud, theft, harassment) may lead to legal proceedings.
+
+9. ONBOARDING REQUIREMENT
+- New hires must read and acknowledge this Code of Conduct within the first 3 days of joining.
+- The AI onboarding assistant will guide new hires through key sections and answer questions.
+- Acknowledgement is digitally recorded in the onboarding system with timestamp and IP address.

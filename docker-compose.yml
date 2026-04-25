@@ -1,0 +1,118 @@
+# AuthBridge AI-Native Onboarding — Docker Compose
+# Usage: docker-compose up --build
+# All services share the authbridge_net network.
+
+version: "3.9"
+
+services:
+
+  # ── FastAPI Backend ──────────────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: authbridge_api
+    ports:
+      - "8000:8000"
+    environment:
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY}
+      - NVIDIA_LLM_MODEL=${NVIDIA_LLM_MODEL:-meta/llama-3.3-70b-instruct}
+      - NVIDIA_EMBED_MODEL=${NVIDIA_EMBED_MODEL:-nvidia/nv-embedqa-e5-v5}
+      - SQLITE_DB_PATH=/data/authbridge.db
+      - CHROMA_PERSIST_DIR=/data/chroma_db
+      - CHROMA_SERVER_HOST=chromadb
+      - CHROMA_SERVER_PORT=8001
+      - REDIS_URL=redis://redis:6379/0
+      - LOG_LEVEL=INFO
+      - LLM_TIMEOUT_SEC=30
+      - RAG_SIMILARITY_THRESHOLD=0.45
+      - DEFAULT_RETENTION_DAYS=365
+    volumes:
+      - authbridge_data:/data
+    depends_on:
+      chromadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - authbridge_net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; r=httpx.get('http://localhost:8000/health',timeout=5); exit(0 if r.status_code==200 else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  # ── Streamlit Frontend ────────────────────────────────────────────────────────
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: authbridge_ui
+    command: ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    environment:
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY}
+      - SQLITE_DB_PATH=/data/authbridge.db
+      - CHROMA_PERSIST_DIR=/data/chroma_db
+      - API_BASE_URL=http://api:8000
+    volumes:
+      - authbridge_data:/data
+    depends_on:
+      - api
+    networks:
+      - authbridge_net
+    restart: unless-stopped
+
+  # ── ChromaDB Vector Store ─────────────────────────────────────────────────────
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: authbridge_chroma
+    ports:
+      - "8001:8001"
+    environment:
+      - CHROMA_SERVER_HOST=0.0.0.0
+      - CHROMA_SERVER_HTTP_PORT=8001
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/data
+      - ANONYMIZED_TELEMETRY=FALSE
+    volumes:
+      - chroma_data:/chroma/data
+    networks:
+      - authbridge_net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/api/v1/heartbeat"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # ── Redis Cache ───────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: authbridge_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    networks:
+      - authbridge_net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  authbridge_data:
+  chroma_data:
+  redis_data:
+
+networks:
+  authbridge_net:
+    driver: bridge

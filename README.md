@@ -194,7 +194,7 @@ AuthBridge_Onboarding/
 
 ## 👤 Author
 
-**Arivukkarasan Rajkumar**
+**Arumugam Rajkumar**
 - GitHub: [github.com/ARajkumar45](https://github.com/ARajkumar45)
 - Email: armugamvrajkumar121@gmail.com
 - LangChain Academy Certified · 2 years Python @ HCL Technologies
